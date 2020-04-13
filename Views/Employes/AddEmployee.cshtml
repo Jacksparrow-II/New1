@@ -1,46 +1,45 @@
 ﻿@model New1.Models.Employee
 
 @{
-    ViewData["Title"] = "UpdateEmployee";
+    ViewData["Title"] = "AddEmployee";
 }
 
-<h1>Update Employee</h1>
-
-<h4>Employee</h4>
+<h1>Add Employee</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="UpdateEmployee">
+        <form asp-action="AddEmployee">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
+                <label asp-for="Name" class="control-label">Name</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="empcode" class="control-label"></label>
+                <label asp-for="empcode" class="control-label">Employee code</label>
                 <input asp-for="empcode" class="form-control" />
                 <span asp-validation-for="empcode" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Salary" class="control-label"></label>
+                <label asp-for="Salary" class="control-label">Salary</label>
                 <input asp-for="Salary" class="form-control" />
                 <span asp-validation-for="Salary" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="position" class="control-label"></label>
+                <label asp-for="position" class="control-label">Position</label>
                 <input asp-for="position" class="form-control" />
                 <span asp-validation-for="position" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            @ViewBag.ErrMsg
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Getemp">Back to List</a>
+    <a asp-action="GetEmployee">Back to List</a>
 </div>
 
 @section Scripts {

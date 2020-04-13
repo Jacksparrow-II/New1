@@ -4,10 +4,10 @@
     ViewData["Title"] = "GetEmployee";
 }
 
-<h1>Get Employee Detail</h1>
+<h1>Employes</h1>
 
 <p>
-    <a asp-action="Addemp">Create New</a>
+    <a asp-action="AddEmployee">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -50,8 +50,7 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "UpdateEmployee", new { id=item.Id }) |
-                @Html.ActionLink("Details", "Getemp", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "DeleteEmployee", new { ID=item.Id })
+                @Html.ActionLink("Delete", "DeleteEmployee", new { id=item.Id })
             </td>
         </tr>
 }
