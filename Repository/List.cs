@@ -32,8 +32,8 @@ namespace New1.Repository
                     {
                         Id = Convert.ToInt32(dr["id"]),
                         Name = Convert.ToString(dr["Name"]),
-                        position = Convert.ToString(dr["position"]),
-                        empcode = Convert.ToString(dr["empcode"]),
+                        Position = Convert.ToString(dr["Position"]),
+                        EmpCode = Convert.ToString(dr["EmpCode"]),
                         Salary = Convert.ToString(dr["Salary"]),
                     }
                     );

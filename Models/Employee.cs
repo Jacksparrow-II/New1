@@ -18,11 +18,11 @@ namespace New1.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        public string empcode { get; set; }
+        public string EmpCode { get; set; }
         [Required]
         public string Salary { get; set; }
         [Required]
-        public string position { get; set; }
+        public string Position { get; set; }
         
         
     }

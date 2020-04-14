@@ -23,8 +23,8 @@ namespace New1.Repository
                 SqlCommand cd = new SqlCommand("AddEmployee", sc);
                 cd.CommandType = System.Data.CommandType.StoredProcedure;
                 cd.Parameters.AddWithValue("@Name", st.Name);
-                cd.Parameters.AddWithValue("@Position", st.position);
-                cd.Parameters.AddWithValue("@empcode", st.empcode);
+                cd.Parameters.AddWithValue("@Position", st.Position);
+                cd.Parameters.AddWithValue("@empcode", st.EmpCode);
                 cd.Parameters.AddWithValue("@salary", st.Salary);
                 sc.Open();
                 bool isExecute = Convert.ToBoolean(cd.ExecuteNonQuery());
