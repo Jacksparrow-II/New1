@@ -15,8 +15,7 @@ namespace New1.Repository
     {
         public bool DeleteEmp(int ID)
         {
-            SqlConnection sc = new SqlConnection("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = work; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
-            SqlCommand cd = new SqlCommand("DeleteEmp", sc);
+            SqlConnection sc = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=work;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"); SqlCommand cd = new SqlCommand("DeleteEmployee", sc);
             cd.CommandType = CommandType.StoredProcedure;
             cd.Parameters.AddWithValue("@Id", ID);
             sc.Open();

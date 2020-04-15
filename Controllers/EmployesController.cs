@@ -10,15 +10,16 @@ namespace New1.Controllers
 {
     public class EmployesController : Controller
     {
-        public IActionResult AddEmployee()
+        public IActionResult AddEmployes()
         {
             return View();
         }
+
         [HttpPost]
-        public IActionResult AddEmployee(Employee emp)
+        public IActionResult AddEmployes(Employes emp)
         {
             AddRepo em = new AddRepo();
-            if (em.Addemp(emp))
+            if (em.AddEmp(emp))
             {
                 ViewBag.ErrMsg = "Employee Details are successfully Added";
             }
@@ -42,7 +43,7 @@ namespace New1.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateEmployee(int ID, Employee s1)
+        public IActionResult UpdateEmployee(int ID, Employes s1)
         {
             Update emp = new Update();
             if (emp.UpdateEmp(s1))
@@ -63,7 +64,7 @@ namespace New1.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeleteEmployee(int ID, Employee st)
+        public IActionResult DeleteEmployee(int ID, Employes st)
         {
             Delete emp = new Delete();
             if (emp.DeleteEmp(ID))
