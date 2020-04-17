@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Data.SqlClient;
-using System.ComponentModel.DataAnnotations;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Configuration;
-using System.Data;
-using Xunit;
+﻿using Microsoft.Data.SqlClient;
 using New1.Models;
+using System;
 
 namespace New1.Repository
 {

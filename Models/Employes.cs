@@ -25,9 +25,9 @@ namespace New1.Models
         [Required]
         public string Gender { get; set; }
         [Required]
-        public string Designation { get; set; }
+        public int Designation { get; set; }
         [Required]
-        public string Department { get; set; }
+        public int Department { get; set; }
         [Required]
         public DateTime DOB { get; set; }
         [Required]
@@ -36,3 +36,7 @@ namespace New1.Models
 
     }
 }
+
+
+
+

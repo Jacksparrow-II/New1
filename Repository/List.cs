@@ -34,8 +34,8 @@ namespace New1.Repository
                         Email = Convert.ToString(dr["Email"]),
                         EmployeeCode = Convert.ToInt32(dr["EmployeeCode"]),
                         Gender = Convert.ToString(dr["Gender"]),
-                        Designation = Convert.ToString(dr["Designation"]),
-                        Department = Convert.ToString(dr["Department"]),
+                        Designation = Convert.ToInt32(dr["Designation"]),
+                        Department = Convert.ToInt32(dr["Department"]),
                         DOB = Convert.ToDateTime(dr["DOB"]),
                         Salary = Convert.ToInt32(dr["Salary"]),
                     }

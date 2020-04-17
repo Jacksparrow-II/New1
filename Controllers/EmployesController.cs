@@ -12,13 +12,30 @@ namespace New1.Controllers
     {
         public IActionResult AddEmployes()
         {
+            DepartmentRepo DepartmentRepo = new DepartmentRepo();
+            var Department = DepartmentRepo.GetDepartment();
+            ViewBag.DataDepartment = Department;
+
+            DesignationRepo DesignationRepo = new DesignationRepo();
+            var Designation = DesignationRepo.GetDesignation();
+            ViewBag.DataDesignation = Designation;
+
             return View();
         }
 
         [HttpPost]
         public IActionResult AddEmployes(Employes emp)
         {
+            DepartmentRepo DepartmentRepo = new DepartmentRepo();
+            var Department = DepartmentRepo.GetDepartment();
+            ViewBag.DataDepartment = Department;
+
+            DesignationRepo DesignationRepo = new DesignationRepo();
+            var Designation = DesignationRepo.GetDesignation();
+            ViewBag.DataDesignation = Designation;
+
             AddRepo em = new AddRepo();
+
             if (em.AddEmp(emp))
             {
                 ViewBag.ErrMsg = "Employee Details are successfully Added";
@@ -38,6 +55,14 @@ namespace New1.Controllers
 
         public IActionResult UpdateEmployee(int ID)
         {
+            DepartmentRepo DepartmentRepo = new DepartmentRepo();
+            var Department = DepartmentRepo.GetDepartment();
+            ViewBag.DataDepartment = Department;
+
+            DesignationRepo DesignationRepo = new DesignationRepo();
+            var Designation = DesignationRepo.GetDesignation();
+            ViewBag.DataDesignation = Designation;
+
             List st = new List();
             return View(st.GetEmp().Find(asd => asd.Id == ID));
         }
@@ -45,6 +70,8 @@ namespace New1.Controllers
         [HttpPost]
         public IActionResult UpdateEmployee(int ID, Employes s1)
         {
+            
+
             Update emp = new Update();
             if (emp.UpdateEmp(s1))
             {
