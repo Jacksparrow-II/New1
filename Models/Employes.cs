@@ -27,7 +27,11 @@ namespace New1.Models
         [Required]
         public int Designation { get; set; }
         [Required]
+        public string DesignationName { get; set; }
+        [Required]
         public int Department { get; set; }
+        [Required]
+        public string DepartmentName { get; set; }
         [Required]
         public DateTime DOB { get; set; }
         [Required]

@@ -84,10 +84,9 @@ namespace New1.Controllers
             }
         }
 
-        public IActionResult DeleteEmployee(int id)
+        public IActionResult DeleteEmployee()
         {
-            List st = new List();
-            return View(st.GetEmp().Find(asd => asd.Id == id));
+            return View();
         }
 
         [HttpPost]
