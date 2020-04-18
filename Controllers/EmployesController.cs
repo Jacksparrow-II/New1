@@ -63,16 +63,16 @@ namespace New1.Controllers
             var Designation = DesignationRepo.GetDesignation();
             ViewBag.DataDesignation = Designation;
 
-            List st = new List();
+            AddRepo st = new AddRepo();
             return View(st.GetEmp().Find(asd => asd.Id == ID));
         }
 
         [HttpPost]
         public IActionResult UpdateEmployee(int ID, Employes s1)
         {
-            
 
-            Update emp = new Update();
+
+            AddRepo emp = new AddRepo();
             if (emp.UpdateEmp(s1))
             {
                 return RedirectToAction("GetEmployee");
@@ -84,15 +84,10 @@ namespace New1.Controllers
             }
         }
 
-        public IActionResult DeleteEmployee()
-        {
-            return View();
-        }
-
-        [HttpPost]
+       
         public IActionResult DeleteEmployee(int ID, Employes st)
         {
-            Delete emp = new Delete();
+            AddRepo emp = new AddRepo();
             if (emp.DeleteEmp(ID))
             {
                 return RedirectToAction("GetEmployee");
